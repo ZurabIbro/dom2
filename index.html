@@ -1,0 +1,51 @@
+
+<html>
+<head>
+  <title>интукод</title>
+</head>
+<body>
+  <div id="main">
+      <ul id="list">
+          <li>html</li>
+          <li>css</li>
+      </ul>
+  </div>
+
+    <div id="copyright">(c) INTOCODE</div>
+
+    <script>
+        const header = () => {
+            const h1 = document.createElement('h1')
+            h1.textContent = 'Работа с DOM'
+            document.getElementById('main').prepend(h1)
+        }
+        header()
+
+        const arcticleToDom = () => {
+            const a = document.createElement('a')
+            a.href = 'https://paper.dropbox.com/doc/DOM-KrSbmrOQHo09BZwgsOmhp'
+            a.textContent = 'DOM'
+            document.getElementById('main').append(a)
+        }
+        arcticleToDom()
+
+        const color = (clr) => {
+            document.body.style.backgroundColor = clr
+        }
+        color('white')
+
+        const listAddTxt = (txt) => {
+            let add = document.createElement('li')
+            add.textContent = txt
+            document.getElementById('list').append(add)
+        }
+        listAddTxt('JabaSprict')
+
+        const deleteBlock = () => {
+            document.getElementById('copyright').remove()
+        }
+        deleteBlock()
+
+    </script>
+</body>
+</html>
